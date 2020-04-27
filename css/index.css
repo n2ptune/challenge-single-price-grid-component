@@ -1,11 +1,150 @@
+* {
+  font-family: 'Karla', sans-serif;
+}
+
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  background-color: hsl(204, 43%, 93%);
 }
 
 #wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  background-color: blue;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.11);
+}
+
+.card section:not(.bottom) {
+  padding: 3rem 2.5rem;
+}
+
+.card .top-header {
+  color: hsl(179, 62%, 43%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.card .top-desciprtion {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card .top-contents {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5rem;
+}
+
+.card .bottom {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.bottom .pricing {
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-left-radius: 10px;
+}
+
+.bottom .why-us {
+  background-color: hsla(179, 62%, 43%, 0.7);
+  border-bottom-right-radius: 10px;
+}
+
+.bottom > section {
+  flex: 1 1 50%;
+}
+
+.bottom .bottom-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.bottom .bottom-dollar {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.bottom-dollar .number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.bottom-dollar .month {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bottom .description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.bottom .button-wrap .shadow-button {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+.bottom .button-wrap .shadow-button:focus {
+  outline: none;
+}
+
+.why-us ul {
+  margin-top: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.why-us ul li {
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 90%;
+  }
+  .card .bottom {
+    flex-direction: column;
+  }
+  .bottom .pricing {
+    border-bottom-left-radius: 0;
+  }
+  .bottom .why-us {
+    border-bottom-left-radius: 10px;
+  }
+  .card section:not(.bottom) {
+    padding: 2rem 1.5rem;
+  }
 }
